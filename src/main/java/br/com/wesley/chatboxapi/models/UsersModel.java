@@ -2,7 +2,6 @@ package br.com.wesley.chatboxapi.models;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,7 +11,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -30,6 +28,7 @@ public class UsersModel implements UserDetails{
     @Id
     @GeneratedValue
     private Integer id;
+
     private String firstname;
     private String lastname;
     private String username;
