@@ -1,6 +1,6 @@
 package br.com.wesley.chatboxapi.controllers;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +20,7 @@ public class HomeController {
     private final UserRepository userRepository;
 
     @GetMapping("/people")
-    public ResponseEntity people(){
+    public ResponseEntity<Collection<UsersModel>> people(){
         return ResponseEntity.ok(this.userRepository.findAll());
     }
 
